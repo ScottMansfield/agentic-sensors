@@ -1,3 +1,8 @@
+/**
+ * @license
+ * Copyright 2025 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
 import { createConnection } from "net";
 import { encode, decode } from "@msgpack/msgpack";
 import { once } from "events";
