@@ -1,6 +1,8 @@
 # Reading Sensors with Agents
 
-This is a demo of exposing environmental sensors to agents. It's designed to run on an Arduino Uno Q because it's a single board computer and has easy extensibility with the Qwiic connector.
+This is a demo of exposing environmental sensors to agents. It's designed to run on an Arduino Uno Q. The Uno Q was chosen because it's a single board computer and has easy hardware extensibility with the Qwiic connector. This is a great environment for prototyping agent to hardware interactions.
+
+This demo agent is built on the [Typescript ADK](https://github.com/google/adk-js).
 
 ## Hardware requirements
 
@@ -18,27 +20,29 @@ I used WiFi and a [USB-C adapter](https://www.amazon.com/dp/B0D1XLNWP2) that has
 
 ## Setup on Arduino Uno Q
 
-**Hardware**
+### Hardware
 
 1. Connect the Thermo and Light modulinos on the Qwiic conector in a daisy chain. 
 
-**Basic Software Setup**
+### Basic Software Setup
+
 This assumes you have already booted and done the initial setup of your Uno Q.
 
 1. `ssh keygen -A` for ssh access to work
 1. Note the IP address for SSH on another machine
 
 
-**Get the code in the right place**
+### Get the code in the right place
+
 1. Getting the code
    1. **Either** scp the files to ~/ArduinoApps folder
    1. **Or** SSH in, go to ~/ArduinoApps folder, git clone this repo
 1. `cd agentic-sensors`
 1. `arduino-app-cli app start .`
 
-This should download all the Arduino dependencies, compile the app, and deploy it on the SoC and MCU. Now the app should be running on the MCU. For this demo, we don't care about the Python part of the app. Next we will set up and run the typescript app.
+This should download all the Arduino dependencies, compile the app, and deploy it on the SoC and MCU.  For this demo, we don't care about the Python part of the app on the SoC. Next we will set up and run the typescript app.
 
-##Set up and run typescript##
+### Set up and run the agent
 
 1. Get an API key from https://aistudio.google.com/api-keys
 1. `echo "GOOGLE_GENAI_USE_VERTEXAI=FALSE" >> .env`
@@ -72,5 +76,7 @@ Example interaction:
 ```
 
 ## Notes
+
+Any language that supports the ADK and MsgPack can be used to implement this kind of demo, I just chose Typescript because it's less represented. The App Lab-supported Python would have been an easier path.
 
 I tried to use the standard arduino-cli to program the mcu but was unsuccessful. I just decided to use the Arduino app lab ecosystem and a python script that does nothing. I'm not sure if it's even required but this is the easiest way to program the MCU.
