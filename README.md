@@ -15,7 +15,6 @@ I used WiFi and a [USB-C adapter](https://www.amazon.com/dp/B0D1XLNWP2) that has
 ## Software Requirements
 
 * node (I used [nvm](https://github.com/nvm-sh/nvm) and installed the latest version)
-* 
 
 ## Setup on Arduino Uno Q
 
