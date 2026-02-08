@@ -61,7 +61,10 @@ Example interaction:
 
 ```
 [user]: hello
-[sensor_reader]: Hello! I'm your sensor reader agent. I can provide you with the current temperature, humidity, and light levels from your environment sensors. I'll present the information in a tidy table and even throw in a random fact related to the readings. How can I help you today?
+[sensor_reader]: Hello! I'm your sensor reader agent. I can provide you with the
+current temperature, humidity, and light levels from your environment sensors.
+I'll present the information in a tidy table and even throw in a random fact
+related to the readings. How can I help you today?
 [user]: what's the temperature like today?
 [sensor_reader]: Here's what the sensors are reporting today:
 
@@ -71,7 +74,8 @@ Example interaction:
 | Humidity    | 59.61 %  |
 | Light Level | 435 lux  |
 
-**Random Fact:** A comfortable indoor temperature for most people is typically between 20°C and 22°C, so your environment is quite pleasant!
+**Random Fact:** A comfortable indoor temperature for most people is typically
+between 20°C and 22°C, so your environment is quite pleasant!
 ```
 
 ## Notes
