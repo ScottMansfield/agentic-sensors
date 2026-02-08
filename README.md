@@ -45,11 +45,10 @@ This should download all the Arduino dependencies, compile the app, and deploy i
 ### Set up and run the agent
 
 1. Get an API key from https://aistudio.google.com/api-keys
-1. `echo "GOOGLE_GENAI_USE_VERTEXAI=FALSE" >> .env`
-1. `echo "GEMINI_API_KEY=PASTE_YOUR_ACTUAL_API_KEY_HERE" >> .env`
-
 1. `cd typescript`
 1. `npm install` _this may take a while_
+1. `echo "GOOGLE_GENAI_USE_VERTEXAI=FALSE" >> .env`
+1. `echo "GEMINI_API_KEY=PASTE_YOUR_ACTUAL_API_KEY_HERE" >> .env`
 1. `npx adk run agent.ts`
 
 This will start the command line so you can interact with the agent.
